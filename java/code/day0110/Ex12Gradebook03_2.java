@@ -19,6 +19,8 @@ public class Ex12Gradebook03_2 {
     public static void main(String[] args) {
         int accrue = 0;
         int old = 0;
+        boolean inputSwitch = false;
+
         Student[] studentArray = new Student[STUDENT_SIZE];
 
         String message;
@@ -44,10 +46,15 @@ public class Ex12Gradebook03_2 {
                         System.out.println("입력을 취소하셨습니다.");
                     }
                 }
+                inputSwitch = true;
             } else if(userChoice == 2) {
-                for(Student student:studentArray) {
-                    if(student == null) break;
-                    else printInfo(student);
+                if(inputSwitch) {
+                    for(Student student:studentArray) {
+                        if(student == null) break;
+                        else printInfo(student);
+                    }
+                } else {
+                    System.out.println("입력된 데이터가 없습니다.");
                 }
             } else {
                 System.out.println("시스템을 종료합니다.");
