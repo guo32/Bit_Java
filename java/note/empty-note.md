@@ -20,13 +20,7 @@
 **내용에 코드 포함 시**
 
     // 위에 한 칸 공백을 만든 후 적당히 tab key로 조정
-    public static void main(String[] args) {}
-    
-<hr>
-
-**추가적인 것**
-* 글자가 **두꺼워져요**
-* ~취소선~ 
+    public static void main(String[] args) {}    
 
 <hr>
 
@@ -62,8 +56,33 @@
   </tr>
 </table>
 
+<table>
+  <tr>
+    <th> </th>
+    <th>session 1</th>
+    <th>session 2</th>
+  </tr>
+  <tr>
+    <th>장점</th>
+    <td>session 1의 내용</td>
+    <td>session 2의 내용</td>
+  </tr>
+  <tr>
+    <th>단점</th>
+    <td>session 1의 내용</td>
+    <td>session 2의 내용</td>
+  </tr>
+</table>
+
 <hr>
 
 **참고자료 추가 시**
 * 대괄호 안에 링크를 넣어줍니다.
-* 참고자료 [naver.com]
+* 참고자료 예시 [https://www.naver.com/]
+
+<hr>
+
+**추가적인 것**
+* 글자가 **두꺼워져요**
+* ~취소선~ 
+* 글자가 _기울어져요_
