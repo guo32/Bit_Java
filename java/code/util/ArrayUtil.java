@@ -58,8 +58,8 @@ public class ArrayUtil {
     }
 
     public static boolean contains(Board[] array, Board board) {
-        for(int i = 0; i < size(array); i++) {
-            if(board.equals(get(array, i))) {
+        for(Board b : array) {
+            if (board.equals(b)) {
                 return true;
             }
         }
@@ -88,6 +88,15 @@ public class ArrayUtil {
     public static int indexOf(Board[] array, int id) {
         for(int i = 0; i < size(array); i++) {
             if(id == get(array, i).getId()) return i;
+        }
+        return -1;
+    }
+
+    public static int indexOf(Board[] array, Board board) {
+        for(int i = 0; i < size(array); i++) {
+            if(board.equals(get(array, i))) {
+                return i;
+            }
         }
         return -1;
     }
@@ -215,7 +224,7 @@ public class ArrayUtil {
         return temp;
     }
 
-    public static Board[] removeByIndex(Board[] array, int index) {
+    public static Board[] remove(Board[] array, int index) {
         Board[] temp = new Board[0];
         for(int i = 0; i < size(array); i++) {
             if(i != index) {
@@ -240,8 +249,8 @@ public class ArrayUtil {
         return removeByIndex(array, indexOf(array, element));
     }
 
-    public static Board[] removeByElement(Board[] array, Board board) {
-        return removeByIndex(array, indexOf(array, board.getId()));
+    public static Board[] remove(Board[] array, Board board) {
+        return remove(array, indexOf(array, board));
     }
 
     public static Student[] removeByElement(Student[] array, Student student) {
