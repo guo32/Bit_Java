@@ -64,7 +64,7 @@ public class Ex02Board02_Homework {
 
     public static void delete(int id) {
         int index = ArrayUtil.indexOf(boardList, id);
-        boardList = ArrayUtil.removeByIndex(boardList, index);
+        boardList = ArrayUtil.remove(boardList, index);
 
         System.out.println("삭제되었습니다.");
         printList();
