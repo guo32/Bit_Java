@@ -9,7 +9,7 @@ public class ScannerUtil {
     // 1. 입력 시 사용자에게 보여줄 메시지 출력을 담당할 메소드
     public static void printMessage(String message) {
         System.out.println(message);
-        System.out.println("> ");
+        System.out.print("> ");
     }
 
     // 2. 스캐너 버그를 미리 방지하는 nextLine()
@@ -24,8 +24,13 @@ public class ScannerUtil {
 
     // 3. 사용자로부터 정수 입력을 담당하는 nextInt()
     public static int nextInt(Scanner scanner, String message) {
-        printMessage(message);
-        int temp = scanner.nextInt();
+        String strTemp = nextLine(scanner, message);
+        while (!strTemp.matches("\\d+")) {
+            System.out.println("잘못 입력하셨습니다.");
+            strTemp = nextLine(scanner, message);
+        }
+
+        int temp = Integer.parseInt(strTemp);
 
         return temp;
     }
