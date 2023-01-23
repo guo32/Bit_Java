@@ -11,4 +11,4 @@
 - `public void push(int e)` : 스택의 가장 위에 파라미터로 들어온 값을 삽입
 - `public int search(int e)` : 스택의 가장 위부터 파라미터로 들어온 값을 검색, 가장 위에 위치하고 있는 값은 1
 
-참고 [[https://docs.oracle.com/javase/7/docs/api/java/util/Stack.html#search(java.lang.Object)]
+참고 [https://docs.oracle.com/javase/7/docs/api/java/util/Stack.html#search(java.lang.Object)]
