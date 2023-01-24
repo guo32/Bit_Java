@@ -70,3 +70,58 @@ Java를 사용하여 자료구조 stack을 구현해보았다.
             return -1;
         }
     }
+
+# 👾 Java로 Stack 구현하기(정수형, 고정된 배열)
+크기가 고정된 정수형 배열과 정수형 변수 top을 사용하여 스택을 구현했다.
+
+🔌 code
+
+    package stack;
+
+    public class Stack3 {
+        private int[] array = new int[100];
+        private int top;
+
+        public Stack3() {
+            top = -1;
+        }
+
+        public boolean empty() {
+            if (top == -1) {
+                return true;
+            }
+            return false;
+        }
+
+        public int size() {
+            return top + 1;
+        }
+
+        public int peek() {
+            if (top != -1) {
+                return array[top];
+            }
+            return -1;
+        }
+
+        public void push(int data) {
+            top++;
+            array[top] = data;
+        }
+
+        public int pop() {
+            if (top != -1) {
+                return array[top--];
+            }
+            return -1;
+        }
+
+        public int search(int data) {
+            for (int i = top; i >= 0; i--) {
+                if (array[i] == data) {
+                    return top - i + 1;
+                }
+            }
+            return -1;
+        }
+    }
