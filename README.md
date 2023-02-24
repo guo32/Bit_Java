@@ -10,4 +10,4 @@
 
 * javascript directory
   - note: 강의 내용 정리 요약
-  - 실습 코드:
+  - code: [ https://github.com/guo32/JX405-JavaBasic ]
